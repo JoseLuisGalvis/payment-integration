@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo por defecto (modo claro) */
+#darkModeToggle.btn-outline-dark {
+  border-color: black;
+  color: black;
+}
+
+/* Fondo oscuro personalizado */
+.bg-custom-dark {
+  background-color: rgb(76, 74, 74) !important;
+}
+
+/* Botón en modo oscuro */
+#darkModeToggle.btn-outline-light {
+  border-color: white;
+  color: white;
+}
+
+/* Iconos del botón */
+#darkModeToggle .bi {
+  transition: color 0.3s ease;
+}
+
+/* Estilo para modo oscuro */
+body.bg-dark .card {
+  background-color: rgb(104, 101, 101) !important;
+  color: white;
+  box-shadow: 8px 12px 14px rgba(255, 255, 255, 0.3); /* Sombra blanca */
+}
+
+/* Estilo por defecto (modo claro) */
+.dark-mode-btn {
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+/* Estilo para modo oscuro */
+body.bg-dark .dark-mode-btn {
+  border-color: black;
+  color: black;
+}
+
+body.bg-dark .dark-mode-btn:hover {
+  background-color: rgb(76, 74, 74);
+  border-color: white;
+  color: white;
+  font-weight: 600;
+}
+
+/* Fin Modo Oscuro */
+
+.dropdown-menu {
+  min-width: 300px;
+}
+
+.card {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave */
+}
+
+.card:hover {
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+}
+
+.card-text {
+  min-height: 48px; /* Ajusta este valor según el número máximo de líneas */
+  overflow: hidden; /* Evita que el texto adicional desborde */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es demasiado largo */
+  display: -webkit-box; /* Para cortar texto con líneas múltiples */
+  -webkit-line-clamp: 2; /* Número máximo de líneas */
+  -webkit-box-orient: vertical;
+}
+
+@media (min-width: 992px) {
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: none;
+    height: auto;
+    width: 300px;
+  }
+}
